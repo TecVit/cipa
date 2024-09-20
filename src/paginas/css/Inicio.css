@@ -1,0 +1,408 @@
+.container-inicio {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 75px 0px 0px 0px;
+}
+
+.container-main-inicio {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-main-inicio .content-main-inicio {
+    width: 92.5%;
+    max-width: 1111px;
+    height: calc(100vh - 75px);
+    max-height: 600px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Text */
+.container-main-inicio .content-main-inicio .text {
+    width: max-content;
+    max-width: 500px;
+    height: auto;
+    display: flex;
+    flex-direction: column;    
+}
+
+.container-main-inicio .content-main-inicio .text h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+    letter-spacing: 0.2px;
+    color: var(--slateThree);
+    margin: 0px 0px 15px 0px;
+} .container-main-inicio .content-main-inicio .text h1 strong {
+    color: var(--one);
+    font-weight: 700;
+}
+
+.container-main-inicio .content-main-inicio .text p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0.2px;
+    color: var(--slateFive);
+    margin: 0px 0px 20px 0px;
+} .container-main-inicio .content-main-inicio .text p strong {
+    color: var(--one);
+    font-weight: 700;
+}
+
+
+/* Text - Btns */
+.container-main-inicio .content-main-inicio .text .btns {
+    width: max-content;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.btn-primary {
+    width: max-content;
+    height: auto;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 12px 29px;
+    background: var(--one);
+    border: 2px solid var(--one);
+    color: var(--slateEleven);
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 0px 12.5px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .1s ease-in-out;
+} .btn-primary:hover,
+.btn-primary:focus {
+    border: 2px solid var(--two);
+    background: var(--two);
+}
+
+
+.btn-secondary {
+    width: max-content;
+    height: auto;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 12px 29px;
+    background: transparent;
+    border: 2px solid transparent;
+    color: var(--slateFour);
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 0px 12.5px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .1s ease-in-out;
+} .btn-secondary:hover,
+.btn-secondary:focus {
+    border: 2px solid var(--slateTen);
+    background: var(--slateTen);
+}
+
+.btn-secondary .seta {
+    font-size: 15px;
+    margin: 0px 2px 0px 8px;
+}
+
+
+/* Image */
+.container-main-inicio .content-main-inicio .image {
+    width: max-content;
+    height: auto;
+}
+
+.container-main-inicio .content-main-inicio .image img {
+    width: 325px;
+    height: auto;
+}
+
+
+
+
+
+
+/* Features */
+.container-features {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-features .content-features {
+    width: 92.5%;
+    max-width: 1111px;
+    height: auto;
+    padding: 50px 0px 100px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.container-features .content-features .list {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 25px 17.5px;
+}
+
+.container-features .content-features .list .feature {
+    flex: 1;
+    min-width: 250px;
+    max-width: 275px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+}
+
+.container-features .content-features .list .feature .icon {
+    font-size: 45px;
+    color: var(--slateThree);
+    margin: 0px 0px 10px 0px;
+}
+
+.container-features .content-features .list .feature h1 {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--slateTwo);
+    margin: 0px 0px 8px 0px;
+    text-align: center;
+}
+
+.container-features .content-features .list .feature p {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--slateFour);
+    text-align: center;
+}
+
+
+
+
+/* Sobre Nós */
+.container-about {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+
+.container-about .content-about {
+    width: 92.5%;
+    max-width: 1111px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.container-about .content-about .image {
+    width: 546px;
+    height: auto;
+    margin: 0px 25px 0px 0px;
+}
+
+.container-about .content-about .image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+
+
+.container-about .content-about .text {
+    width: 100%;
+    max-width: 475px;
+    height: auto;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    color: var(--slateThree);
+}
+
+.container-about .content-about .text h1 {
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 700;
+    margin: 0px 0px 12px 0px;
+} .container-about .content-about .text h1 strong {
+    font-weight: 700;
+    color: var(--one);
+}
+
+.container-about .content-about .text p {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 24px;
+    margin: 0px 0px 12px 0px;
+} .container-about .content-about .text p strong {
+    font-weight: 700;
+    color: var(--one);
+}
+
+.container-about .content-about .text .items {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-about .content-about .text .items li {
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 6.5px 0px;
+}
+
+.container-about .content-about .text .items li .icon {
+    font-size: 26px;
+    background: #e6f8ed;
+    color: var(--one);
+    border-radius: 50%;
+    padding: 6px;
+    margin: 0px 10px 0px 0px;
+}
+
+
+
+
+/* Contact */
+.container-contact {
+    width: 100%;
+    height: auto;
+    background: var(--three);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0px 0px 0px;
+    color: var(--white);
+}
+
+
+.container-contact .content-contact {
+    width: 92.5%;
+    max-width: 1111px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Top */
+.container-contact .content-contact .top {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    padding: 40px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-contact .content-contact .top h1 {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 34px;
+    color: var(--white);
+    max-width: 400px;
+}
+
+.container-contact .content-contact .top .btns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+}
+
+.container-contact .content-contact .btn-primary {
+    color: var(--white);
+}
+
+.container-contact .content-contact .btn-secondary {
+    color: var(--white);
+}  .container-contact .content-contact .btn-secondary:hover,
+.container-contact .content-contact .btn-secondary:focus {
+    border: 2px solid var(--white);
+    color: var(--black);
+    background: var(--white);
+}
+
+
+/* Bottom */
+.container-contact .content-contact .bottom {
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 35px 0px;
+    flex-direction: row;
+    border-top: 1px solid var(--white);
+}
+
+.container-contact .content-contact .bottom a {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0px 20px 0px 0px;
+    user-select: none;
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+} .container-contact .content-contact .bottom a:hover,
+.container-contact .content-contact .bottom a:focus {
+    text-decoration: underline;
+}
+
+.container-contact .content-contact .bottom p {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0px 0px 0px auto;
+} .container-contact .content-contact .bottom p strong {
+    color: var(--blue);
+    font-weight: 700;
+}
+
+
+
+/* About Mobile */
+@media (max-width: 1250px) {
+    .container-about .content-about {
+        flex-direction: column;
+    }
+    .container-about .content-about .image {
+        margin: 0px 0px 25px 0px;
+    }
+    .container-about .content-about .text {
+        width: 100%;
+        max-width: 546px;
+    }
+
+    
+}
