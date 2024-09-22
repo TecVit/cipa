@@ -1,0 +1,102 @@
+/* Contact */
+.container-contact {
+    width: 100%;
+    height: auto;
+    background: var(--slateEleven);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    color: var(--slateOne);
+}
+
+
+.container-contact .content-contact {
+    width: 90%;
+    max-width: 1111px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Top */
+.container-contact .content-contact .top {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    padding: 40px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-contact .content-contact .top h1 {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 34px;
+    color: var(--slateOne);
+    max-width: 400px;
+}
+
+
+.container-contact .content-contact .top img {
+    width: 80px;
+    height: auto;
+    margin: -10px;
+}
+
+.container-contact .content-contact .top .btns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+}
+
+.container-contact .content-contact .btn-primary {
+    color: var(--white);
+}
+
+.container-contact .content-contact .btn-secondary {
+    color: var(--slateOne);
+}  .container-contact .content-contact .btn-secondary:hover,
+.container-contact .content-contact .btn-secondary:focus {
+    border: 2px solid var(--slateOne);
+    color: var(--slateEleven);
+    background: var(--slateOne);
+}
+
+
+/* Bottom */
+.container-contact .content-contact .bottom {
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 35px 0px;
+    flex-direction: row;
+    border-top: 1px solid var(--slateOne);
+}
+
+.container-contact .content-contact .bottom a {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0px 20px 0px 0px;
+    user-select: none;
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+} .container-contact .content-contact .bottom a:hover,
+.container-contact .content-contact .bottom a:focus {
+    text-decoration: underline;
+}
+
+.container-contact .content-contact .bottom p {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0px 0px 0px auto;
+} .container-contact .content-contact .bottom p strong {
+    color: var(--blue);
+    font-weight: 700;
+}

@@ -9,17 +9,18 @@
     line-height: 22px !important;
     letter-spacing: 0.3px !important;
     padding-bottom: 12.5px !important;
-    font-weight: 600 !important;
-    color: var(--stoneTwo) !important;
-    background-color: var(--stoneNine) !important;
+    font-weight: 500 !important;
+    color: var(--slateTwo) !important;
+    background-color: var(--slateTen) !important;
+    box-shadow: var(--boxShadow);
 }
   
 .Toastify__toast--success {
-    background-color: var(--stoneNine) !important;
+    background-color: var(--slateTen) !important;
 }
   
 .Toastify__toast--error {
-    background-color: var(--stoneNine) !important;
+    background-color: var(--slateTen) !important;
 }
   
 .Toastify__toast-body {

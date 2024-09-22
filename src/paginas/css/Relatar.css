@@ -1,0 +1,189 @@
+.container-relatar {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 75px 0px 0px 0px;
+}
+
+.container-main-relatar {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-main-relatar .content-main-relatar {
+    width: 90%;
+    max-width: 1111px;
+    height: auto;
+    min-height: calc(100vh - 75px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Text */
+.container-main-relatar .content-main-relatar .text {
+    width: max-content;
+    max-width: 450px;
+    height: auto;
+    display: flex;
+    flex-direction: column;    
+}
+
+.container-main-relatar .content-main-relatar .text h1 {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 52px;
+    letter-spacing: 0.2px;
+    color: var(--slateThree);
+    margin: 0px 0px 15px 0px;
+} .container-main-relatar .content-main-relatar .text h1 strong {
+    color: var(--one);
+    font-weight: 700;
+}
+
+.container-main-relatar .content-main-relatar .text p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0.2px;
+    color: var(--slateFive);
+    margin: 0px 0px 20px 0px;
+} .container-main-relatar .content-main-relatar .text p strong {
+    color: var(--one);
+    font-weight: 700;
+}
+
+
+/* Form */
+.container-main-relatar .content-main-relatar .form {
+    width: 100%;
+    max-width: 525px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background: var(--slateFour);
+    border: 1px solid var(--slateFour);
+    border-radius: 14px;
+    padding: 30px;
+    margin: 0px 0px 0px 20px;
+}
+
+.container-main-relatar .content-main-relatar .form h1 {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0px 0px 8px 0px;
+    color: var(--slateEleven);
+}
+
+.container-main-relatar .content-main-relatar .form .input {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+}
+
+.container-main-relatar .content-main-relatar .form .input input {
+    width: 100%;
+    height: 45px;
+    border: 1px solid var(--slateSeven);
+    background: transparent;
+    border-radius: 4px;
+    padding: 0px 15px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--slateEleven);
+} .container-main-relatar .content-main-relatar .form .input input:focus {
+    border: 1px solid var(--two);
+}
+
+.container-main-relatar .content-main-relatar .form .input select {
+    width: 100%;
+    height: 45px;
+    border: 1px solid var(--slateSeven);
+    border-radius: 4px;
+    background: transparent;
+    color: var(--slateEleven);
+    padding: 0px 15px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+} .container-main-relatar .content-main-relatar .form .input select:focus {
+    border: 1px solid var(--two);
+}
+
+.container-main-relatar .content-main-relatar .form .input textarea {
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 70px;
+    min-height: 70px;
+    border: 1px solid var(--slateSeven);
+    border-radius: 4px;
+    background: transparent;
+    color: var(--slateEleven);
+    padding: 12.5px 15px;
+    font-size: 13px;
+    font-weight: 500;
+} .container-main-relatar .content-main-relatar .form .input textarea:focus {
+    border: 1px solid var(--two);
+}
+
+.container-main-relatar .content-main-relatar .form button {
+    width: 100%;
+    height: 50px;
+    background: var(--one);
+    margin: 15px 0px 0px 0px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--white);
+    cursor: pointer;
+} .container-main-relatar .content-main-relatar .form button:hover,
+.container-main-relatar .content-main-relatar .form button:focus {
+    background: var(--two);
+}
+
+.container-main-relatar .content-main-relatar .form p {
+    width: 100%;
+    height: auto;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--slateEight);
+    margin: 20px 0px 0px 0px;
+    text-align: center;
+}
+
+@media (max-width: 1110px) {
+    .container-main-relatar .content-main-relatar {
+        display: flex;
+        flex-direction: column;
+        padding: 50px 0px;
+    }
+
+    .container-main-relatar .content-main-relatar .text {
+        max-width: 100%;
+        margin: 0px 0px 20px 0px;
+    }
+
+    .container-main-relatar .content-main-relatar .text h1 {
+        font-size: 32px;
+        line-height: unset;
+    } .container-main-relatar .content-main-relatar .text p {
+        font-size: 17px;
+    }
+
+    
+    .container-main-relatar .content-main-relatar .form {
+        max-width: 100%;
+        margin: 0px;
+    }
+    
+}

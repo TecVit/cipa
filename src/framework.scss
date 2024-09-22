@@ -48,14 +48,14 @@
 
 @for $i from 0 through 9 {
     $duration: unquote("1.#{$i}s");
-    [data-duration-animation="#{$duration}"] {
+    [data-animation-duration="#{$duration}"] {
         transition: opacity #{$duration} ease-in-out, transform #{$duration} ease-in-out !important;
     }
 }
 
 @for $i from 0 through 9 {
     $duration: unquote("0.#{$i}s");
-    [data-duration-animation="#{$duration}"] {
+    [data-animation-duration="#{$duration}"] {
         transition: opacity #{$duration} ease-in-out, transform #{$duration} ease-in-out !important;
     }
 }

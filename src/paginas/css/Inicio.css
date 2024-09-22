@@ -16,7 +16,7 @@
 }
 
 .container-main-inicio .content-main-inicio {
-    width: 92.5%;
+    width: 90%;
     max-width: 1111px;
     height: calc(100vh - 75px);
     max-height: 600px;
@@ -36,9 +36,9 @@
 }
 
 .container-main-inicio .content-main-inicio .text h1 {
-    font-size: 48px;
+    font-size: 42px;
     font-weight: 700;
-    line-height: 60px;
+    line-height: 54px;
     letter-spacing: 0.2px;
     color: var(--slateThree);
     margin: 0px 0px 15px 0px;
@@ -84,7 +84,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all .1s ease-in-out;
 } .btn-primary:hover,
 .btn-primary:focus {
     border: 2px solid var(--two);
@@ -107,7 +106,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all .1s ease-in-out;
 } .btn-secondary:hover,
 .btn-secondary:focus {
     border: 2px solid var(--slateTen);
@@ -146,7 +144,7 @@
 }
 
 .container-features .content-features {
-    width: 92.5%;
+    width: 90%;
     max-width: 1111px;
     height: auto;
     padding: 50px 0px 100px 0px;
@@ -208,11 +206,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px;
+    padding: 50px 0px;
 }
 
 .container-about .content-about {
-    width: 92.5%;
+    width: 90%;
     max-width: 1111px;
     height: auto;
     display: flex;
@@ -223,7 +221,8 @@
 
 
 .container-about .content-about .image {
-    width: 546px;
+    width: 100%;
+    max-width: 546px;
     height: auto;
     margin: 0px 25px 0px 0px;
 }
@@ -291,118 +290,31 @@
 }
 
 
-
-
-/* Contact */
-.container-contact {
-    width: 100%;
-    height: auto;
-    background: var(--three);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 50px 0px 0px 0px;
-    color: var(--white);
-}
-
-
-.container-contact .content-contact {
-    width: 92.5%;
-    max-width: 1111px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-/* Top */
-.container-contact .content-contact .top {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    padding: 40px 0px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.container-contact .content-contact .top h1 {
-    font-size: 26px;
-    font-weight: 700;
-    line-height: 34px;
-    color: var(--white);
-    max-width: 400px;
-}
-
-.container-contact .content-contact .top .btns {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: auto;
-}
-
-.container-contact .content-contact .btn-primary {
-    color: var(--white);
-}
-
-.container-contact .content-contact .btn-secondary {
-    color: var(--white);
-}  .container-contact .content-contact .btn-secondary:hover,
-.container-contact .content-contact .btn-secondary:focus {
-    border: 2px solid var(--white);
-    color: var(--black);
-    background: var(--white);
-}
-
-
-/* Bottom */
-.container-contact .content-contact .bottom {
-    width: 100%;
-    height: auto;
-    display: flex;
-    padding: 35px 0px;
-    flex-direction: row;
-    border-top: 1px solid var(--white);
-}
-
-.container-contact .content-contact .bottom a {
-    font-size: 15px;
-    font-weight: 500;
-    margin: 0px 20px 0px 0px;
-    user-select: none;
-    cursor: pointer;
-    transition: all .1s ease-in-out;
-} .container-contact .content-contact .bottom a:hover,
-.container-contact .content-contact .bottom a:focus {
-    text-decoration: underline;
-}
-
-.container-contact .content-contact .bottom p {
-    font-size: 15px;
-    font-weight: 500;
-    margin: 0px 0px 0px auto;
-} .container-contact .content-contact .bottom p strong {
-    color: var(--blue);
-    font-weight: 700;
-}
-
-
-
 /* About Mobile */
 @media (max-width: 1250px) {
     .container-about .content-about {
+        width: 90%;
         flex-direction: column;
+        align-content: center;
+        padding: 0px;
+        margin: 0px;
     }
+    
     .container-about .content-about .image {
-        margin: 0px 0px 25px 0px;
+        margin: 0px 0px 32.5px 0px;
     }
+
     .container-about .content-about .text {
         width: 100%;
         max-width: 546px;
     }
+}
 
-    
+@media (max-width: 675px) {
+    .container-about .content-about .image {
+        max-width: 100% !important;
+    }
+    .container-about .content-about .text {
+        max-width: 100% !important;
+    }
 }
