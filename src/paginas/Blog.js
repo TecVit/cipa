@@ -18,6 +18,7 @@ import { animacoes } from '../firebase/animacoes';
 import Contact from '../componentes/Contact';
 import { BsFillPersonFill, BsPersonCircle } from 'react-icons/bs';
 import { getArticles } from '../firebase/artigos';
+import { FaCalendarDays } from 'react-icons/fa6';
 
 
 export default function Blog() {
@@ -159,7 +160,7 @@ export default function Blog() {
                                     <BsPersonCircle className='icon' />
                                 )}<div className='text'>
                                 <h1>{artigoInfo.nome}</h1>
-                                <p>{diasDesdeData(artigoInfo.data)} Dias atrás</p>
+                                <p> <FaCalendarDays className='icon' /> {diasDesdeData(artigoInfo.data)} Dias atrás</p>
                             </div>
                         </div>
                         <div className='paragraph'>

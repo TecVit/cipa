@@ -118,15 +118,15 @@ export default function Navbar() {
                         </div>
                         <div className='link'>
                             <h1>‎ </h1>
-                            <a>Cookies</a>
-                            <a>Termos de Uso</a>
-                            <a>Política de Privacidade</a>
+                            <a href='/cookies#'>Cookies</a>
+                            <a href='/termos-de-uso#'>Termos de Uso</a>
+                            <a href='/politica-de-privacidade#'>Política de Privacidade</a>
                         </div>
                         <div className='link'>
                             <h1>Links</h1>
                             <a href='/#'>Início</a>
                             <a href='/blog#'>Blog</a>
-                            <a href='/galeria#'>Galeria</a>
+                            <a href='/#faq'>FAQ</a>
                             <a href='/sobre#'>Sobre Nós</a>
                         </div>
                         <div className='link'>

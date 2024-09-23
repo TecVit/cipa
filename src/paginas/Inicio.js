@@ -10,13 +10,38 @@ import { TiArrowRight } from 'react-icons/ti';
 import { HiArrowNarrowRight, HiOutlineArrowRight } from 'react-icons/hi';
 import { BiSupport } from 'react-icons/bi';
 import { HiOutlineClipboardDocumentList } from 'react-icons/hi2';
-import { IoIosMegaphone } from 'react-icons/io';
+import { IoIosAddCircleOutline, IoIosCloseCircleOutline, IoIosMegaphone } from 'react-icons/io';
 import { FaCheck } from 'react-icons/fa';
 import { animacoes } from '../firebase/animacoes';
 import Contact from '../componentes/Contact';
 
 
 export default function Inicio() {
+
+    const faqs = [
+        {
+            pergunta: 'O que é a CIPA?',
+            resposta: 'A Comissão Interna de Prevenção de Acidentes (CIPA) é um grupo formado por trabalhadores e empregadores com o objetivo de promover a segurança e a saúde no ambiente de trabalho, prevenindo acidentes.',
+        },
+        {
+            pergunta: 'Como devo relatar um acidente que ocorreu na escola?',
+            resposta: 'Você pode relatar o ocorrido acessando a página https://cipa.netlify.app/relatar e preenchendo o formulário de relato de acidentes. Certifique-se de incluir detalhes como motivo do acidente, local e descrição do acidente.',
+        },
+        {
+            pergunta: 'Por que notificar acidentes?',
+            resposta: 'Notificação de acidentes é importante para controle e prevenção de novos acidentes. Auxilia na solução do risco para que não se torne algo grave ou que se repita o acidente. Sua notificação pode salvar vidas!',
+        },
+        {
+            pergunta: 'Quais são os principais riscos em ambientes escolares?',
+            resposta: 'Os principais riscos incluem quedas, acidentes com objetos cortantes, queimaduras, e exposição a substâncias químicas, entre outros.',
+        },
+        {
+            pergunta: 'Como os professores e funcionários podem contribuir para a segurança?',
+            resposta: 'Os funcionários devem seguir as normas de segurança, participar de treinamentos, relatar condições inseguras e incentivar os alunos a adotar comportamentos seguros.',
+        },
+    ];
+
+    const [statusFaqs, setStatusFaqs] = useState([Array.from({ length: 10 }, () => false)]);
 
     // Animações
     useEffect(() => {
@@ -101,11 +126,42 @@ export default function Inicio() {
                                 <FaCheck className='icon' />
                                 Saúde no trabalho
                             </li>
-                            <li data-animation="top" data-animation-duration="1.1s">
+                            <li id='faq' data-animation="top" data-animation-duration="1.1s">
                                 <FaCheck className='icon' />
                                 Melhorias nas escolas
                             </li>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* FAQ */}
+            <section className='container-faq'>
+                <div className='content-faq'>
+                    <h1>Perguntas Frequentes</h1>
+                    <p>Tudo o que você precisa saber</p>
+                    <div className='list'>
+                        {faqs.length > 0 && (
+                            faqs.map((val, i) => (
+                                <li onClick={() => setStatusFaqs((prev) => {
+                                    let list = [...prev];
+                                    list[i] = !list[i];
+                                    return list;
+                                })} key={i}>
+                                    <div className='top'>
+                                        <h1>{val.pergunta}</h1>
+                                        {statusFaqs[i] ? (
+                                            <IoIosCloseCircleOutline className='icon' />
+                                        ) : (
+                                            <IoIosAddCircleOutline className='icon' />
+                                        )}
+                                    </div>
+                                    {statusFaqs[i] && (
+                                        <p>{val.resposta}</p>
+                                    )}
+                                </li>
+                            ))
+                        )}
                     </div>
                 </div>
             </section>

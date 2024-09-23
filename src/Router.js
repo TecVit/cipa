@@ -8,6 +8,9 @@ import Navbar from './componentes/Navbar';
 import Inicio from './paginas/Inicio';
 import Relatar from './paginas/Relatar';
 import Blog from './paginas/Blog';
+import Termos from './paginas/documentos/Termos';
+import Privacidade from './paginas/documentos/Privacidade';
+
 
 // Erros
 import Error404 from './paginas/Erro404';
@@ -19,6 +22,7 @@ import './css/customToastify.css';
 
 import { useNavigate } from 'react-router-dom';
 import { clearCookies, deleteCookie, getCookie, setCookie } from './firebase/cookies';
+import Cookies from './paginas/documentos/Cookies';
 
 
 const RouterApp = () => {
@@ -76,7 +80,13 @@ const RouterApp = () => {
       <Routes>
         <Route path="/" element={<Inicio />} />
         <Route path="/relatar" element={<Relatar />} />
+        
+        {/* Documentos */}
         <Route path="/blog" element={<Blog />} />
+        <Route path="/termos-de-uso" element={<Termos />} />
+        <Route path="/politica-de-privacidade" element={<Privacidade />} />
+        <Route path="/cookies" element={<Cookies />} />
+        
         <Route path="/*" element={<Error404 />} />
       </Routes>
     </Router>

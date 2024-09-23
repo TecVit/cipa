@@ -79,6 +79,7 @@
     font-size: 36px;
     font-weight: 700;
     line-height: 50px;
+    letter-spacing: -0.5px;
     margin: 22.5px 0px;
 }
 
@@ -303,14 +304,21 @@
     font-size: 18px;
     font-weight: 600;
     letter-spacing: 0px;
-    margin: 0px 0px 4px 0px;
+    margin: 0px 0px 6px 0px;
 }
 
 .container-article .content-article .profile .text p {
     font-size: 15px;
     font-weight: 500;
     color: var(--slateFive);
-    margin: 0px 0px 4px 0px;
+    margin: 0px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.container-article .content-article .profile .text p .icon {
+    font-size: 15px;
+    margin: 0px 6px 0px 0px;
 }
 
 .container-article .content-article .paragraph {
