@@ -7,10 +7,31 @@ import { IoIosArrowDown, IoIosMegaphone } from 'react-icons/io';
 import { useNavigate } from 'react-router-dom';
 import { animacoes } from '../firebase/animacoes';
 import { deleteCookie, getCookie, setCookie } from '../firebase/cookies';
+import { IoClose } from 'react-icons/io5';
+import { RxHamburgerMenu } from 'react-icons/rx';
+import { FaChevronUp } from 'react-icons/fa';
 
 export default function Navbar() {
 
     const navigate = useNavigate();
+
+    const [hasShadow, setHasShadow] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+        if (window.scrollY > 75) {
+            setHasShadow(true);
+        } else {
+            setHasShadow(false);
+        }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+        window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     // Tema Dark / Light
     const darkCookie = getCookie('dark') || false;
@@ -59,7 +80,9 @@ export default function Navbar() {
         setCookie('dark', !isDarkTheme);
     };
 
+    // Modais
     const [mdPaginas, setMdPaginas] = useState(false);
+    const [mdNavbar, setMdNavbar] = useState(false);
 
     // Animações
     useEffect(() => {
@@ -71,7 +94,7 @@ export default function Navbar() {
     }, []);
 
     return (
-        <header data-animation data-animation-duration="0.6s" className='container-navbar'>
+        <header data-animation data-animation-duration="0.6s" className={hasShadow ? 'container-navbar boxShadow' : 'container-navbar'}>
             <div className='content-navbar'>
                 <img onClick={() => window.location.href = "/"} src={Logo} alt="Logo da Cipa" />
                 <nav className='links'>
@@ -100,6 +123,12 @@ export default function Navbar() {
                     </button>
                 </div>
                 
+                {mdNavbar ? (
+                    <IoClose onClick={() => setMdNavbar(false)} className='btn btn-close' />
+                ) : (
+                    <RxHamburgerMenu onClick={() => setMdNavbar(true)} className='btn btn-open' />
+                )}
+                
                 {/* Modal Páginas */}
                 {mdPaginas && (
                     <div onMouseEnter={() => setMdPaginas(true)} onMouseLeave={() => setMdPaginas(false)} className='modal-paginas'>
@@ -108,6 +137,13 @@ export default function Navbar() {
                             <a>Email</a>
                             <a>Telefone</a>
                             <a>Whatsapp</a>
+                        </div>
+                        <div className='link'>
+                            <h1>Links</h1>
+                            <a href='/#'>Início</a>
+                            <a href='/blog#'>Blog</a>
+                            <a href='/#faq'>FAQ</a>
+                            <a href='/sobre#'>Sobre Nós</a>
                         </div>
                         <div className='link'>
                             <h1>Regulamento</h1>
@@ -123,21 +159,47 @@ export default function Navbar() {
                             <a href='/politica-de-privacidade#'>Política de Privacidade</a>
                         </div>
                         <div className='link'>
-                            <h1>Links</h1>
-                            <a href='/#'>Início</a>
-                            <a href='/blog#'>Blog</a>
-                            <a href='/#faq'>FAQ</a>
-                            <a href='/sobre#'>Sobre Nós</a>
-                        </div>
-                        <div className='link'>
                             <h1>Integrantes</h1>
                             <a>Diretores</a>
                             <a>Coordenadores</a>
                             <a>Desenvolvedor</a>
                         </div>
+                        <FaChevronUp onClick={() => setMdPaginas(false)} className='btn btn-open' />
                     </div>
                 )}
             </div>
+
+            {mdNavbar && (
+                <section className='container-navbar-mobile'>
+                    <div className='content-navbar-mobile'>
+                        <nav className='links'>
+                            <a href='/#'>Início</a>
+                            <a onMouseEnter={() => setMdPaginas(true)}>
+                                Páginas
+                                <IoIosArrowDown className='seta'/>
+                            </a>
+                            <a href='/blog'>Blog</a>
+                        </nav>
+                        <div className='btns'>
+                            {/* Switch */}
+                            <div className="input">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        onChange={() => toggleTheme()}
+                                        className="switch"
+                                        checked={isDarkTheme ? true : false}
+                                    />
+                                </label>
+                            </div>
+                            <button onClick={() => window.location.href = "/relatar"}>
+                                <IoIosMegaphone className='icon' />
+                                Relatar
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            )}
         </header>
     )
 }

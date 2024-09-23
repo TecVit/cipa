@@ -7,7 +7,7 @@ import ImageExample from '../image/image.png';
 
 import { GoArrowRight, GoShieldCheck } from 'react-icons/go';
 import { TiArrowRight } from 'react-icons/ti';
-import { HiArrowNarrowRight, HiOutlineArrowRight } from 'react-icons/hi';
+import { HiArrowNarrowRight, HiOutlineArrowLeft, HiOutlineArrowRight } from 'react-icons/hi';
 import { BiSupport } from 'react-icons/bi';
 import { HiOutlineClipboardDocumentList } from 'react-icons/hi2';
 import { IoIosMegaphone } from 'react-icons/io';
@@ -100,13 +100,14 @@ export default function Blog() {
                                     )}
                                     <p>{artigos[0].nome}</p>
                                 </div>
-                                <h1 data-animation="left" data-animation-duration="0.7s">{truncate(artigos[0].descricao, 100)}</h1>
+                                <h1 data-animation="left" data-animation-duration="0.7s">{truncate(artigos[0].descricao, 90)}</h1>
                                 <button onClick={() => {
                                     setArtigoInfo(artigos[0]);
                                     setMdArtigo(true);
                                     setTimeout(() => {
+                                        animacoes();
                                         window.location.href = "/blog#";
-                                    }, 50);
+                                    }, 85);
                                 }} data-animation="left" data-animation-duration="0.6s">
                                     Ler Artigo
                                     <HiOutlineArrowRight className='seta' />
@@ -137,8 +138,9 @@ export default function Blog() {
                                             setArtigoInfo(val);
                                             setMdArtigo(true);
                                             setTimeout(() => {
+                                                animacoes();
                                                 window.location.href = "/blog#";
-                                            }, 50);
+                                            }, 85);
                                         }}>Ler Mais <HiOutlineArrowRight className='seta' /> </a>
                                     </article>
                                 ))}
@@ -153,7 +155,14 @@ export default function Blog() {
             {mdArtigo && (
                 <section className='container-article'>
                     <article className='content-article'>
-                        <div className='profile'>
+                        <a data-animation="top" data-animation-duration="0.5s" onClick={() => {
+                            setArtigoInfo({});
+                            setMdArtigo(false);
+                            setTimeout(() => {
+                                animacoes();
+                            }, 50);
+                        }}><HiOutlineArrowLeft className='seta' /> Voltar </a>
+                        <div data-animation="top" data-animation-duration="0.6s" className='profile'>
                                 {artigoInfo.imagem ? (
                                     <img src={artigoInfo.imagem} />
                                 ) : (
@@ -164,9 +173,9 @@ export default function Blog() {
                             </div>
                         </div>
                         <div className='paragraph'>
-                            <h1 className='titulo'>{artigoInfo.titulo}</h1>
-                            <p className='descricao'>{artigoInfo.descricao}</p>
-                            <div className='artigo' dangerouslySetInnerHTML={{ __html: artigoInfo.artigo }} />
+                            <h1 data-animation="top" data-animation-duration="0.7s" className='titulo'>{artigoInfo.titulo}</h1>
+                            <p data-animation="top" data-animation-duration="0.8s" className='descricao'>{artigoInfo.descricao}</p>
+                            <div data-animation="top" data-animation-duration="0.9s" className='artigo' dangerouslySetInnerHTML={{ __html: artigoInfo.artigo }} />
                         </div>
                     </article>
                 </section>

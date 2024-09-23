@@ -120,13 +120,13 @@
 
 /* Image */
 .container-main-inicio .content-main-inicio .image {
-    width: max-content;
+    width: 325px;
     height: auto;
 }
 
 .container-main-inicio .content-main-inicio .image img {
-    width: 325px;
-    height: auto;
+    width: 100%;
+    height: max-content;
 }
 
 
@@ -161,7 +161,7 @@
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 25px 17.5px;
+    gap: 35px 17.5px;
 }
 
 .container-features .content-features .list .feature {
@@ -369,7 +369,9 @@
 }
 
 .container-faq .content-faq .list li .top .icon {
-    font-size: 27.5px;
+    font-size: 25px;
+    min-width: 25px;
+    min-height: 25px;
     margin: 0px;
     padding: 0px;
 }
@@ -383,8 +385,57 @@
 }
 
 
+/* Main Mobile */
+@media (max-width: 910px) {
+    .container-main-inicio {
+        padding: 0px;
+    }
+    
+    .container-main-inicio .content-main-inicio {
+        width: 90%;
+        height: max-content;
+        min-height: calc(100vh - 75px);
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 65px 0px 0px 0px;
+        margin: 0px;
+    }
 
+    .container-main-inicio .content-main-inicio .text {
+        width: 100%;
+        max-width: 525px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+        margin: 0px auto;
+    }
 
+    .container-main-inicio .content-main-inicio .text * {
+        text-align: center;
+    }
+
+    .container-main-inicio .content-main-inicio .text h1 {
+        font-size: 34px;
+        font-weight: 700;
+        line-height: 42px;
+    }
+
+    .container-main-inicio .content-main-inicio .text p {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+    }
+
+    .container-main-inicio .content-main-inicio .image {
+        margin: 0px auto 25px auto;
+        width: 250px;
+        height: 250px;
+    }
+}
 
 
 

@@ -63,7 +63,7 @@ export default function Inicio() {
                         <h1 data-animation="top" data-animation-duration="0.7s">Bem-vindo à <strong>CIPA</strong> da Diretoria de Ensino de <strong>Araraquara</strong></h1>
                         <p data-animation="top" data-animation-duration="0.8s">Promovendo a segurança e o bem-estar no ambiente escolar com ações preventivas e informativas.</p>
                         <div data-animation="top" data-animation-duration="0.9s" className='btns'>
-                            <button className='btn-primary'>Saiba Mais</button>
+                            <button onClick={() => window.location.href = "/sobre"} className='btn-primary'>Saiba Mais</button>
                             <button onClick={() => window.location.href = "/relatar"} className='btn-secondary'>
                                 Relatar
                                 <HiOutlineArrowRight className='seta' />
@@ -138,12 +138,12 @@ export default function Inicio() {
             {/* FAQ */}
             <section className='container-faq'>
                 <div className='content-faq'>
-                    <h1>Perguntas Frequentes</h1>
-                    <p>Tudo o que você precisa saber</p>
+                    <h1 data-animation="top" data-animation-duration="0.8s">Perguntas Frequentes</h1>
+                    <p data-animation="top" data-animation-duration="0.9s">Tudo o que você precisa saber</p>
                     <div className='list'>
                         {faqs.length > 0 && (
                             faqs.map((val, i) => (
-                                <li onClick={() => setStatusFaqs((prev) => {
+                                <li data-animation="top" data-animation-duration={`1.${i}s`} onClick={() => setStatusFaqs((prev) => {
                                     let list = [...prev];
                                     list[i] = !list[i];
                                     return list;

@@ -18,7 +18,6 @@ const getArticles = async () => {
             const articlesList = await reportRef.docs.map((doc) => {
                 return doc.data();
             });
-            console.log(articlesList);
             return articlesList;
         } else {
             return [];
