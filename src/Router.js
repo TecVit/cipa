@@ -28,7 +28,7 @@ import Cookies from './paginas/documentos/Cookies';
 const RouterApp = () => {
 
   const darkCookie = getCookie('dark') || false;
-  const [isDarkTheme, setIsDarkTheme] = useState(darkCookie);
+  const [isDarkTheme, setIsDarkTheme] = useState(darkCookie ? JSON.parse(darkCookie) : false);
 
   const toggleTheme = () => {
     

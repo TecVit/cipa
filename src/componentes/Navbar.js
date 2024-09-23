@@ -35,8 +35,8 @@ export default function Navbar() {
 
     // Tema Dark / Light
     const darkCookie = getCookie('dark') || false;
-    const [isDarkTheme, setIsDarkTheme] = useState(darkCookie);
-    
+    const [isDarkTheme, setIsDarkTheme] = useState(darkCookie ? JSON.parse(darkCookie) : false);
+
     const toggleTheme = () => {
         let newTheme = !isDarkTheme;
         setIsDarkTheme(newTheme);
